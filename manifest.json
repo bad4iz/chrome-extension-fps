@@ -1,5 +1,23 @@
 {
   "manifest_version": 2,
   "name": "FPS Extension",
-  "version": "0.5"
+  "description": "FPS МЕРИЛКА",
+  "version": "0.5",
+  "browser_action": {
+    "default_icon": "fps19.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+
 }
