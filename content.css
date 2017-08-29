@@ -1,2 +1,17 @@
 body{
 }
+.fps{
+    position: absolute;
+    z-index: 9999;
+    left: 10px;
+    top:20px;
+    background-color: aqua;
+
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+}
+
+.visible{
+    display: block;
+}
