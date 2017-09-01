@@ -52,15 +52,17 @@ class Fps {
 
 
         this.ctx.clearRect(0, 0,this.width, this.height);
+        this.ctx.fillStyle = '#000';
+
         for (let i=0; i<=this.width; i++) {
-            this.ctx.fillStyle = '#000';
             this.ctx.fillRect(i,0,1,this.height - this.allFps[i]);
-            this.ctx.fillStyle = "#fff";
+        }
+        this.ctx.fillText(currentFps + 'fps', 21,51);
+
+        this.ctx.fillStyle = "#fff";
+        for (let i=0; i<=this.width; i++) {
             this.ctx.fillRect(i,this.height - this.allFps[i],1,2);
         }
-        this.ctx.fillStyle = '#000';
-        this.ctx.fillText(currentFps + 'fps', 21,51);
-        this.ctx.fillStyle = "#fff";
         this.ctx.fillText(currentFps + 'fps', 20,50);
 
     }
